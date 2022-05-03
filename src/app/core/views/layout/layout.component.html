@@ -1,0 +1,10 @@
+<app-header (navOpenEvent)="toggleMenu()">
+</app-header>
+
+<p-sidebar [(visible)]="visibleSideBar">
+    <app-nav></app-nav>
+</p-sidebar>
+
+<div class="content"> 
+    <router-outlet></router-outlet>
+</div>
