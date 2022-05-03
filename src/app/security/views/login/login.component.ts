@@ -12,7 +12,7 @@ import { LoginService } from '../../services/login.service';
 export class LoginComponent implements OnInit {
 
   //TODO modificar todo
-  user: string = "staff";
+  user: string = "admin";
   password: string = "1a1dc91c907325c69271ddf0c944bc72";
   isloading : boolean = false;
 
@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
     if(this.auth.getToken() != null){
       this.router.navigate(['welcome']);
     } else {
-      this.login();
+      this.login(); //TODO esto fuera
     }
   }
 

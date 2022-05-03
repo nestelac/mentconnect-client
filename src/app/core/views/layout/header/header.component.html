@@ -1,12 +1,12 @@
-<p-toolbar class="container">
+<p-toolbar>
     <div class="p-toolbar-group-left">
-      <button pButton pRipple type="button" icon="pi pi-bars" (click)="toggleSideNav()" id="menu-icon" class="p-button-rounded p-button-text primary-icon"></button>
+      <button pButton pRipple icon="pi pi-bars" (click)="toggleSideNav()" class="p-button-rounded p-button-text primary-icon"></button>
     </div>
   
     <div class="p-toolbar-group-right">
       <p-menu class="logout-menu" #menu [popup]="true" [model]="items"></p-menu>
-      <span class="p-buttonset" (click)="menu.toggle($event)">
-        <p-button label={{getName()}} icon="pi pi-sort-down" iconPos="right" class="primary"></p-button>
+      <span (click)="menu.toggle($event)">
+        <p-button label={{getName()}} icon="pi pi-sort-down" iconPos="right"></p-button>
       </span>
     </div>
 </p-toolbar>
