@@ -24,32 +24,32 @@ Los beneficios que aporta MentConnect son:
 
 ### Web
 Dirigida para los profesionales sanitarios.
-<p align="center"><img src="assets/readme/diagrama-web.PNG"/></p> 
+<p align="center"><img src="src/assets/readme/diagrama-web.PNG"/></p> 
 
 ### Móvil
 Dirigida para los pacientes.
-<p align="center"><img src="assets/readme/diagrama-movil.PNG"/></p> 
+<p align="center"><img src="src/assets/readme/diagrama-movil.PNG"/></p> 
  
 ## Ejemplo de uso
 
 ### Creación de cuestionarios
-<p align="center"><img src="assets/readme/creacion-cuestionario.PNG" width = "750"/></p>
+<p align="center"><img src="src/assets/readme/creacion-cuestionario.PNG" width = "750"/></p>
 
 ### Listado de cuestiones
-<p align="center"><img src="assets/readme/listado-preguntas.PNG" width = "250"/></p>
+<p align="center"><img src="src/assets/readme/listado-preguntas.PNG" width = "250"/></p>
 
 ### Formulario de respuesta
 #### Respuesta numérica
-<p align="center"><img src="assets/readme/respuesta-numerica.PNG" width = "250"/></p>
+<p align="center"><img src="src/assets/readme/respuesta-numerica.PNG" width = "250"/></p>
 
 #### Respuesta dicotómica
-<p align="center"><img src="assets/readme/respuesta-dicotomica.PNG" width = "250"/></p>
+<p align="center"><img src="src/assets/readme/respuesta-dicotomica.PNG" width = "250"/></p>
 
 #### Respuesta cualitativa politómica
-<p align="center"><img src="assets/readme/respuesta-cualitativa.PNG" width = "250"/></p>
+<p align="center"><img src="src/assets/readme/respuesta-cualitativa.PNG" width = "250"/></p>
 
 #### Respuesta cuantitativa politómica
-<p align="center"><img src="assets/readme/respuesta-cuantitativa.PNG" width = "250"/></p>
+<p align="center"><img src="src/assets/readme/respuesta-cuantitativa.PNG" width = "250"/></p>
 
 ## Instalación
 
