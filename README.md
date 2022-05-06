@@ -53,28 +53,14 @@ Dirigida para los pacientes.
 
 ## Instalación
 
-### Compilación
-
-Para compilar el proyecto se utilizará el comando genérico de maven:  
-```Shell
-$ mvn clean install
-```  
-
 ### Dependencias
-El módulo requiere la presencia de un JDK 11
+El módulo requiere la presencia de Angular CLI
 
 ### Ejecución
-Para arrancar la aplicación navegar hasta la calase anotada como @SpringBootApplication
-
-* Hacer click con el botón derecho sobre la clase:
-    * Run as >
-        * Java application
+Ejecutar ng serve. Navegar a http://localhost:4200/. La aplicación se recargará automáticamente si cambia alguno de los archivos de origen.
 
 ## Construido con
-* [Spring Boot](https://spring.io/projects/spring-boot)
-* [Hibernate](https://hibernate.org/)
-* [Maven](https://maven.apache.org/)
-
+* [Angular CLI](https://angular.io/cli)
 
 ## Seguridad
 La seguridad esta basada el Token JWT, para generar un token valido se debe realizar una llamada POST donde
