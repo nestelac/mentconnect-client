@@ -5,6 +5,7 @@ import { ResponseCredentials } from 'src/app/core/models/ResponseCredentials';
 import { LoginService } from '../../services/login.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
+import { CustomTranslateService } from 'src/app/core/services/custom-translate.service';
 
 @Component({
   selector: 'app-login',
@@ -23,10 +24,9 @@ export class LoginComponent implements OnInit {
     private auth: AuthService,
     private router: Router,
     private formBuilder : FormBuilder,
-    public translate : TranslateService
+    public translate : CustomTranslateService
   ) { 
-    this.translate.addLangs([`${this.routeTranslate}es`, `${this.routeTranslate}ca`, `${this.routeTranslate}en`])
-    this.translate.setDefaultLang(`${this.routeTranslate}en`);
+    this.translate.setRoute(this.routeTranslate)
   }
 
   ngOnInit(): void {
@@ -60,6 +60,6 @@ export class LoginComponent implements OnInit {
     
   }
   onSetLanguage(iso : string){
-    this.translate.use(this.routeTranslate + iso);
+    this.translate.setLang(iso);
   }
 }
