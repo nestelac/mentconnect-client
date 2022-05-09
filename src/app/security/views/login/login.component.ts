@@ -13,6 +13,7 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class LoginComponent implements OnInit {
 
+  routeTranslate = 'security/login/';
   user: string;
   password: string;
   isloading : boolean = false;
@@ -24,8 +25,8 @@ export class LoginComponent implements OnInit {
     private formBuilder : FormBuilder,
     public translate : TranslateService
   ) { 
-    this.translate.addLangs(['login/es', 'login/ca', 'login/en'])
-    this.translate.setDefaultLang('login/en');
+    this.translate.addLangs([`${this.routeTranslate}es`, `${this.routeTranslate}ca`, `${this.routeTranslate}en`])
+    this.translate.setDefaultLang(`${this.routeTranslate}en`);
   }
 
   ngOnInit(): void {
@@ -41,10 +42,8 @@ export class LoginComponent implements OnInit {
       });
     }
   }
-  onLogin()
-  {
-    if(!this.loginForm.invalid)
-    {
+  onLogin(){
+    if(!this.loginForm.invalid){
       this.isloading = false;
       this.loginService.login(this.user, this.password).subscribe(
         (res: ResponseCredentials) => {
@@ -60,8 +59,7 @@ export class LoginComponent implements OnInit {
     }
     
   }
-  onSetLanguage(iso : string)
-  {
-    this.translate.use(`login/${iso}`);
+  onSetLanguage(iso : string){
+    this.translate.use(this.routeTranslate + iso);
   }
 }
