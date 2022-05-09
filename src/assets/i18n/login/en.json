@@ -1,0 +1,15 @@
+{
+    "login" : {
+        "title" : "¡Access to MentConnect!",
+        "form" :{
+            "user" : "Username",
+            "password" : "Password",
+            "language" : {
+                "english" : "English",
+                "spanish" : "Spanish",
+                "valencian" : "Valencian"
+            },
+            "logIn" : "Log In"
+        }
+    }
+}

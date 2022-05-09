@@ -1,1 +1,31 @@
-<p>login works!</p>
+<div class="container">
+
+    <div>
+        <img src="assets/images/logo.png"/>
+        <h1>{{"login.title" | translate}}</h1>
+    </div>
+
+    <form [formGroup] = "loginForm">
+
+        <span class="p-float-label">
+            <input id="float-input" type="text" pInputText formControlName = "user" [(ngModel)] = "user"> 
+            <label for="float-input">{{"login.form.user" | translate}}</label>
+        </span>
+
+        <span class="p-float-label">
+            <input id="float-input" type="text" pInputText formControlName = "password" [(ngModel)] = "password"> 
+            <label for="float-input">{{"login.form.password" | translate}}</label>
+        </span>
+
+        <span class="p-float-label">
+            <select p-dropdown (change)="onSetLanguage($event.target.value)">
+                <option value="en">{{"login.form.language.english" | translate}}</option>
+                <option value="es">{{"login.form.language.spanish" | translate}}</option>
+                <option value="ca">{{"login.form.language.valencian" | translate}}</option>
+            </select>
+        </span>
+
+        <button pButton type="button" label="Click" (click) = "onLogin()">{{"login.form.logIn" | translate}}</button>
+    
+    </form>
+</div>

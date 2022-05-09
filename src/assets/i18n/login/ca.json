@@ -1,0 +1,15 @@
+{
+    "login" : {
+        "title" : "¡Accedeix  a MentConnect!",
+        "form" :{
+            "user" : "Usuari",
+            "password" : "Contrasenya",
+            "language" : {
+                "english" : "Anglés",
+                "spanish" : "Espanyol",
+                "valencian" : "Valencià"
+            },
+            "logIn" : "Iniciar sessió"
+        }
+    }
+}
