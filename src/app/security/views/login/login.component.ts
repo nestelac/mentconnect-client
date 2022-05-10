@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
   user: string;
   password: string;
   isloading : boolean = false;
-  
+
   constructor(    
     private loginService: LoginService,
     private auth: AuthService,
@@ -52,11 +52,11 @@ export class LoginComponent implements OnInit {
     );
 
   }
-  onSetLanguage(iso: string){
-    this.translate.setLang(iso);
+  onSetLanguage(code: string){
+    this.translate.setLang(code);
   }
   showMessageError()
   {
-    this.mesaageService.add({key: 'credentialError', severity:'error', summary: this.translate.translateKey(this.titleErrorKey), detail: this.translate.translateKey(this.detailErrorKey) });
+    this.mesaageService.add({key: 'credentialError', severity:'error', summary: this.translate.translateKey(this.titleErrorKey), detail: this.translate.translateKey(this.detailErrorKey)});
   }
 }

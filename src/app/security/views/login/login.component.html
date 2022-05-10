@@ -1,32 +1,33 @@
-<div class="container" [ngStyle] = "{'filter': !isloading ? 'blur(0)' : 'blur(4px)'}" >
+<div class="container p-fluid" [ngStyle] = "{'filter': !isloading ? 'blur(0)' : 'blur(4px)'}" >
     <p-toast key="credentialError" position="top-center"></p-toast>
     <div class="container">
         <img src="assets/images/logo.png"/>
         <h1>{{"login.title" | translate}}</h1>
     </div>
-    <span class="p-float-label p-input-icon-left">
-        <i class="pi pi-user"></i>
-        <input id="float-input" type="username" pInputText [(ngModel)] = "user" required name = "user"> 
-        <label for="float-input">{{"login.form.user" | translate}}</label>
-    </span>
-
-    <span class="p-float-label p-input-icon-left" style="margin-top: 25px">
-        <i class="pi pi-lock"></i>
-        <input id="float-input" type="password" pInputText [(ngModel)] = "password" required name = "password"> 
-        <label for="float-input">{{"login.form.password" | translate}}</label>
-    </span>
-
-    <span class="p-float-label p-input-icon-left" style="margin-top: 25px">
-        <i class="pi pi-lock"></i>
-        <p-dropdown  optionLabel="label" (onChange)="onSetLanguage($event.value.iso)" [style]="{'width':'222px'}"
-        [options] = '[{label: "Ingles", iso: "en"},
-                    {label: "Español", iso: "es"},
-                    {label: "Valenciano", iso: "ca"}]'>
-        </p-dropdown>
-        <label for="float-input">{{"login.form.language.title" | translate}}</label>
-    </span>
-
-    <button pButton style="margin-top: 25px; width: 222px;" (click) = "onLogin()" [disabled]="user == '' || password == ''" class="primary" label = "{{'login.form.logIn' | translate}}"></button>
+    <div>
+        <div class="p-float-label p-input-icon-left mt-4">
+            <i class="pi pi-user"></i>
+            <input id="float-input" type="username" pInputText [(ngModel)] = "user" required name = "user"> 
+            <label for="float-input">{{"login.form.user" | translate}}</label>
+        </div>
+    
+        <div class="p-float-label p-input-icon-left mt-4">
+            <i class="pi pi-lock"></i>
+            <input id="float-input" type="password" pInputText [(ngModel)] = "password" required name = "password"> 
+            <label for="float-input">{{"login.form.password" | translate}}</label>
+        </div>
+    
+        <div class="p-float-label p-input-icon-left" style="margin-top: 25px">
+            <i class="pi pi-lock"></i>
+            <p-dropdown  optionLabel="label" (onChange)="onSetLanguage($event.value.code)"
+            [options] = '[{label: "Ingles", code: "en"},
+                        {label: "Español", code: "es"},
+                        {label: "Valenciano", code: "ca"}]'>
+            </p-dropdown>
+            <label for="float-input">{{"login.form.language.title" | translate}}</label>
+        </div>
+        <button pButton style="margin-top: 25px;" (click) = "onLogin()" [disabled]="user == '' || password == ''" class="primary" label = "{{'login.form.logIn' | translate}}"></button>
+    </div>
  </div>
 
 <div class="loadWrapper container" *ngIf="isloading">
