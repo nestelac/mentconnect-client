@@ -48,6 +48,7 @@ export class AuthService {
       let credentials = this.getTokenCredentials();
       if (credentials != null) {
         this.token = credentials.accessToken;
+        this.putUserInfo(this.jwtHelper.decodeToken(this.token));
       }
     }
 
