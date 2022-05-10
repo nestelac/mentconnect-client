@@ -6,6 +6,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
 import {DropdownModule} from 'primeng/dropdown';
 import {ButtonModule} from 'primeng/button';
+import {InputTextModule} from 'primeng/inputtext';
+import { MessagesModule } from "primeng/messages";
+import { MessageModule } from "primeng/message";
+import {ProgressSpinnerModule} from 'primeng/progressspinner';
+import {ToastModule} from 'primeng/toast';
 
 @NgModule({
   declarations: [
@@ -16,8 +21,13 @@ import {ButtonModule} from 'primeng/button';
     FormsModule,
     ReactiveFormsModule,
     TranslateModule,
-    DropdownModule
-    
+    DropdownModule,
+    InputTextModule,
+    ButtonModule,
+    MessagesModule,
+    MessageModule,
+    ProgressSpinnerModule,
+    ToastModule
   ]
 })
 export class SecurityModule { }

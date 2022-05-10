@@ -5,11 +5,16 @@
             "user" : "Username",
             "password" : "Password",
             "language" : {
+                "title" : "Language",
                 "english" : "English",
                 "spanish" : "Spanish",
                 "valencian" : "Valencian"
             },
-            "logIn" : "Log In"
+            "logIn" : "Log In",
+            "credentialError" : {
+                "title" : "Credentials",
+                "detail" : "The username or password is incorrect."
+            }
         }
     }
 }
