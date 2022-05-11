@@ -14,10 +14,12 @@ export class CustomTranslateService {
     this.route = route;
     let currentLang = this.translate.currentLang
     if(currentLang){
-      this.setLang(currentLang.slice(-2))
+      this.setLang(currentLang.slice(-2));
     }
-    else
+    else{
       this.setLang('en');
+    }
+      
   }
 
   public setLang(lang : string){
