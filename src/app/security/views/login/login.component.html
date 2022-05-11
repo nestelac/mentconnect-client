@@ -5,28 +5,28 @@
         <h1>{{"login.title" | translate}}</h1>
     </div>
     <div>
-        <div class="p-float-label p-input-icon-left mt-4">
+        <div class="p-float-label p-input-icon-left">
             <i class="pi pi-user"></i>
-            <input id="float-input" type="username" pInputText [(ngModel)] = "user" required name = "user"> 
+            <input id="float-input" type="username" pInputText [(ngModel)] = "user" required name = "user" (keyup.enter)="onLogin()"> 
             <label for="float-input">{{"login.form.user" | translate}}</label>
         </div>
     
         <div class="p-float-label p-input-icon-left mt-4">
             <i class="pi pi-lock"></i>
-            <input id="float-input" type="password" pInputText [(ngModel)] = "password" required name = "password"> 
+            <input id="float-input" type="password" pInputText [(ngModel)] = "password" required name = "password" (keyup.enter)="onLogin()"> 
             <label for="float-input">{{"login.form.password" | translate}}</label>
         </div>
     
-        <div class="p-float-label p-input-icon-left" style="margin-top: 25px">
+        <div class="p-float-label p-input-icon-left mt-4">
             <i class="pi pi-lock"></i>
             <p-dropdown  optionLabel="label" (onChange)="onSetLanguage($event.value.code)"
-            [options] = '[{label: "Ingles", code: "en"},
+            [options] = '[{label: "English", code: "en"},
                         {label: "Español", code: "es"},
-                        {label: "Valenciano", code: "ca"}]'>
+                        {label: "Valencià", code: "ca"}]'>
             </p-dropdown>
             <label for="float-input">{{"login.form.language.title" | translate}}</label>
         </div>
-        <button pButton style="margin-top: 25px;" (click) = "onLogin()" [disabled]="user == '' || password == ''" class="primary" label = "{{'login.form.logIn' | translate}}"></button>
+        <button pButton (click) = "onLogin()" [disabled]="user == '' || password == ''" class="primary mt-4" label = "{{'login.form.logIn' | translate}}"></button>
     </div>
  </div>
 

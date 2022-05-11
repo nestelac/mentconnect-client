@@ -18,8 +18,8 @@ export class LoginComponent implements OnInit {
   routeTranslate = 'security/login/';
   titleErrorKey = 'login.form.credentialError.title';
   detailErrorKey = "login.form.credentialError.detail";
-  user: string;
-  password: string;
+  user: string = "";
+  password: string = "";
   isloading : boolean = false;
 
   constructor(    
@@ -38,6 +38,10 @@ export class LoginComponent implements OnInit {
     } 
   }
   onLogin(){
+
+    if (this.user == "") return;
+    if (this.password == "") return;
+
     this.isloading = true;
     this.loginService.login(this.user, this.password).subscribe(
       (res: ResponseCredentials) => {
@@ -55,8 +59,7 @@ export class LoginComponent implements OnInit {
   onSetLanguage(code: string){
     this.translate.setLang(code);
   }
-  showMessageError()
-  {
+  showMessageError(){
     this.mesaageService.add({key: 'credentialError', severity:'error', summary: this.translate.translateKey(this.titleErrorKey), detail: this.translate.translateKey(this.detailErrorKey)});
   }
 }

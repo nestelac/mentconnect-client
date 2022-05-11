@@ -24,8 +24,7 @@ export class CustomTranslateService {
     this.translate.use(this.route + lang);
   }
   
-  public translateKey(key : string)
-  {
+  public translateKey(key : string){
     return this.translate.instant(key);
   }
 }
