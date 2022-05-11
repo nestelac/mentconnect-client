@@ -1,1 +1,34 @@
-<p>login works!</p>
+<div class="flex align-items-center flex-column justify-content-center min-h-full p-fluid">
+    <p-blockUI [blocked]="isloading"></p-blockUI>
+    <p-toast key="credentialError" position="top-center"></p-toast>
+    <div class="flex align-items-center flex-column justify-content-center min-h-full">
+        <img src="assets/images/logo.png"/>
+        <h1>{{"login.title" | translate}}</h1>
+    </div>
+    <div>
+        <div class="p-float-label p-input-icon-left">
+            <i class="pi pi-user"></i>
+            <input type="username" pInputText [(ngModel)] = "user" required name = "user" (keyup.enter)="onLogin()"> 
+            <label>{{"login.form.user" | translate}}</label>
+        </div>
+    
+        <div class="p-float-label p-input-icon-left mt-4">
+            <i class="pi pi-lock"></i>
+            <input type="password" pInputText [(ngModel)] = "password" required name = "password" (keyup.enter)="onLogin()"> 
+            <label>{{"login.form.password" | translate}}</label>
+        </div>
+    
+        <div class="p-float-label p-input-icon-left mt-4">
+            <i class="pi pi-lock"></i>
+            <p-dropdown  optionLabel="label" (onChange)="onSetLanguage($event.value.code)"
+            [options] = "languages">
+            </p-dropdown>
+            <label>{{"login.form.language.title" | translate}}</label>
+        </div>
+        <button pButton (click) = "onLogin()" [disabled]="user == '' || password == ''" class="primary mt-4" label = "{{'login.form.logIn' | translate}}"></button>
+    </div>
+ </div>
+
+<div class="loadWrapper flex align-items-center flex-column justify-content-center min-h-full" *ngIf="isloading">
+    <p-progressSpinner></p-progressSpinner>
+</div>

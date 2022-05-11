@@ -13,6 +13,7 @@ import { SidebarModule } from 'primeng/sidebar';
 import { ToolbarModule } from 'primeng/toolbar';
 import { ButtonModule } from 'primeng/button';
 import { MenuModule } from 'primeng/menu';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { MenuModule } from 'primeng/menu';
     SidebarModule,
     ToolbarModule,
     ButtonModule,
-    MenuModule
+    MenuModule,
+    TranslateModule
   ],
   providers: [
     HttpClientModule,

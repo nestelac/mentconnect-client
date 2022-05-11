@@ -1,0 +1,17 @@
+{
+    "login" : {
+        "title" : "¡Accedeix  a MentConnect!",
+        "form" :{
+            "user" : "Usuari",
+            "password" : "Contrasenya",
+            "language" : {
+                "title" : "Idioma"
+            },
+            "logIn" : "Iniciar sessió",
+            "credentialError" : {
+                "title" : "Credencials",
+                "detail" : "L'usuari o la contrasenya són incorrectes."
+            }
+        }
+    }
+}
