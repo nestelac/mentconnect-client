@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { AuthService } from 'src/app/core/services/auth.service';
 import { ResponseCredentials } from 'src/app/core/models/ResponseCredentials';
 import { environment } from 'src/environments/environment';
+import { sha256 } from 'js-sha256';
 
 @Injectable({
   providedIn: 'root'
@@ -19,7 +20,7 @@ export class LoginService {
 
     this.auth.clearCredentials();
 
-    return this.http.post<ResponseCredentials>(environment.server + '/security/login', {username: username, password: password});
+    return this.http.post<ResponseCredentials>(environment.server + '/security/login', {username: username, password: sha256(password)});
   }
   
   putCredentials(res: ResponseCredentials) {

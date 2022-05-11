@@ -16,6 +16,7 @@ import { MenuModule } from 'primeng/menu';
 import { AvatarModule } from 'primeng/avatar';
 import { PatientDischargeComponent } from './views/patient-discharge/patient-discharge.component';
 import { BreadcrumbModule } from 'primeng/breadcrumb';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { BreadcrumbModule } from 'primeng/breadcrumb';
     ButtonModule,
     MenuModule,
     AvatarModule,
-    BreadcrumbModule
+    BreadcrumbModule,
+    TranslateModule
   ],
   providers: [
     HttpClientModule,

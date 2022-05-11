@@ -1,0 +1,17 @@
+{
+    "login" : {
+        "title" : "¡Access to MentConnect!",
+        "form" :{
+            "user" : "Username",
+            "password" : "Password",
+            "language" : {
+                "title" : "Language"
+            },
+            "logIn" : "Log In",
+            "credentialError" : {
+                "title" : "Credentials",
+                "detail" : "The username or password is incorrect."
+            }
+        }
+    }
+}
