@@ -1,0 +1,12 @@
+.user {
+    display: flex;
+
+    .avatar {
+        float: left;
+    }
+    
+    .userName {
+        margin-left: 0.5rem;
+        align-self: flex-end;
+    }
+}

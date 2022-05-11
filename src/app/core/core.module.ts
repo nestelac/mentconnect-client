@@ -13,13 +13,17 @@ import { SidebarModule } from 'primeng/sidebar';
 import { ToolbarModule } from 'primeng/toolbar';
 import { ButtonModule } from 'primeng/button';
 import { MenuModule } from 'primeng/menu';
+import { AvatarModule } from 'primeng/avatar';
+import { PatientDischargeComponent } from './views/patient-discharge/patient-discharge.component';
+import { BreadcrumbModule } from 'primeng/breadcrumb';
 
 @NgModule({
   declarations: [
     LayoutComponent,
     WelcomeComponent,
     HeaderComponent,
-    NavComponent
+    NavComponent,
+    PatientDischargeComponent
   ],
   imports: [
     CommonModule,
@@ -29,7 +33,9 @@ import { MenuModule } from 'primeng/menu';
     SidebarModule,
     ToolbarModule,
     ButtonModule,
-    MenuModule
+    MenuModule,
+    AvatarModule,
+    BreadcrumbModule
   ],
   providers: [
     HttpClientModule,

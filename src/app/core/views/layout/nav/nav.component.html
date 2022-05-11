@@ -1,4 +1,23 @@
-<nav>
-    <p-menu [model]="items"></p-menu>
-</nav>
-
+<div class="container">
+  <div class="user">
+    <div class="avatar">
+      <p-avatar
+        icon="pi pi-user"
+        styleClass="p-mr-2"
+        size="xlarge"
+        shape="circle"
+      ></p-avatar>
+    </div>
+    <div class="userName">
+      <b>{{getUserName()}}</b>
+      <br>
+      <b>{{getName()}}</b>
+    </div>
+  </div>
+  <br>
+  <nav>
+    <p-menu [model]="items" styleClass="itemsMenu" [style]="{ width: '100%', border: '0'}"></p-menu>
+  </nav>
+    
+</div>
+  

@@ -1,13 +1,13 @@
-<div>
+<div class=private-layout>
     <app-header (navOpenEvent)="toggleMenu()">
     </app-header>
 
-    <div>
-        <p-sidebar [(visible)]="visibleSideBar">
+    <div class="container">
+        <p-sidebar [(visible)]="visibleSideBar" [baseZIndex]="10000" [modal]="false" >
             <app-nav></app-nav>
         </p-sidebar>
 
-        <div> 
+        <div class="content"> 
             <router-outlet></router-outlet>
         </div>
     </div>

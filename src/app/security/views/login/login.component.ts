@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit {
 
   //TODO modificar todo
   user: string = "admin";
-  password: string = "1a1dc91c907325c69271ddf0c944bc72";
+  password: string = "d74ff0ee8da3b9806b18c877dbf29bbde50b5bd8e4dad7a3a725000feb82e8f1";
   isloading : boolean = false;
 
   constructor(    

@@ -15,7 +15,6 @@ export class HeaderComponent implements OnInit {
   navOpen = true;
   isloading : boolean = false;
   @Output() navOpenEvent = new EventEmitter();
-  items: MenuItem[];
 
   constructor(
     public auth: AuthService,
@@ -24,13 +23,6 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     this.user = this.auth.getUserInfo();
-    this.items = [{
-      label: "Logout",
-      icon: 'pi pi-sign-out',
-      command: () => {
-          this.logout();
-      }
-    }]
   }
 
   toggleSideNav() {
@@ -38,13 +30,5 @@ export class HeaderComponent implements OnInit {
     this.navOpenEvent.emit(this.navOpen);
   }
 
-  getName() : string {
-    if (this.user == null) return "";
-    return this.user.name + " " + this.user.surnames + " (" + this.user.username + ")";
-  }
-
-  logout() {
-    this.auth.logout();
-  }
 
 }

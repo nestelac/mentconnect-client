@@ -1,12 +1,19 @@
-<p-toolbar>
+<p-toolbar class="container">
     <div class="p-toolbar-group-left">
-      <button pButton pRipple icon="pi pi-bars" (click)="toggleSideNav()" class="p-button-rounded p-button-text primary-icon"></button>
+      <button pButton pRipple icon="pi pi-bars" (click)="toggleSideNav()" ></button>
     </div>
-  
+
+    <div class="logo">
+      <div class="image" routerLink="/welcome">
+        <img src="assets/images/logo.png" height="40px" alt="" />
+      </div>
+      <div class="text" routerLink="/welcome">
+        <b>MentConnect</b>
+      </div>
+    </div>
+    
     <div class="p-toolbar-group-right">
-      <p-menu class="logout-menu" #menu [popup]="true" [model]="items"></p-menu>
-      <span (click)="menu.toggle($event)">
-        <p-button label={{getName()}} icon="pi pi-sort-down" iconPos="right"></p-button>
-      </span>
+      <p-button icon="pi pi-bell" badge="8" styleClass="p-button-lg"></p-button>
+      <p-button icon="pi pi-bell" badge="8" styleClass="p-button-lg p-button-text"></p-button>
     </div>
 </p-toolbar>
