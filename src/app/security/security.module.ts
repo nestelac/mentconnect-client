@@ -11,6 +11,7 @@ import { MessagesModule } from "primeng/messages";
 import { MessageModule } from "primeng/message";
 import {ProgressSpinnerModule} from 'primeng/progressspinner';
 import {ToastModule} from 'primeng/toast';
+import {BlockUIModule} from 'primeng/blockui';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import {ToastModule} from 'primeng/toast';
     MessagesModule,
     MessageModule,
     ProgressSpinnerModule,
-    ToastModule
+    ToastModule,
+    BlockUIModule
   ]
 })
 export class SecurityModule { }
