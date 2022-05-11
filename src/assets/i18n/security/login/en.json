@@ -5,10 +5,7 @@
             "user" : "Username",
             "password" : "Password",
             "language" : {
-                "title" : "Language",
-                "english" : "English",
-                "spanish" : "Spanish",
-                "valencian" : "Valencian"
+                "title" : "Language"
             },
             "logIn" : "Log In",
             "credentialError" : {

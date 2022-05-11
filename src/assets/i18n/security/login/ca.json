@@ -5,10 +5,7 @@
             "user" : "Usuari",
             "password" : "Contrasenya",
             "language" : {
-                "title" : "Idioma",
-                "english" : "Anglés",
-                "spanish" : "Espanyol",
-                "valencian" : "Valencià"
+                "title" : "Idioma"
             },
             "logIn" : "Iniciar sessió",
             "credentialError" : {
