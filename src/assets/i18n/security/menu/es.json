@@ -1,0 +1,9 @@
+{
+    "menu": {
+        "assistance": "Asistencia",
+        "questionnaire": "Cuestionarios",
+        "schedule": "Agenda",
+        "management": "Gestión",
+        "logOut": "Cerrar sesión"
+    }
+}

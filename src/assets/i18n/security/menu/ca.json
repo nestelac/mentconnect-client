@@ -1,0 +1,9 @@
+{
+    "menu": {
+        "assistance": "Assistència",
+        "questionnaire": "Qüestionaris",
+        "schedule": "Agenda",
+        "management": "Gestió",
+        "logOut": "Tancar sessió"
+    }
+}
