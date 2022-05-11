@@ -21,6 +21,9 @@ export class LoginComponent implements OnInit {
   user: string = "";
   password: string = "";
   isloading : boolean = false;
+  languages = [{label: "English", code: "en"},
+              {label: "Español", code: "es"},
+              {label: "Valencià", code: "ca"}]
 
   constructor(    
     private loginService: LoginService,

@@ -21,9 +21,7 @@
         <div class="p-float-label p-input-icon-left mt-4">
             <i class="pi pi-lock"></i>
             <p-dropdown  optionLabel="label" (onChange)="onSetLanguage($event.value.code)"
-            [options] = '[{label: "English", code: "en"},
-                        {label: "Español", code: "es"},
-                        {label: "Valencià", code: "ca"}]'>
+            [options] = "languages">
             </p-dropdown>
             <label>{{"login.form.language.title" | translate}}</label>
         </div>
