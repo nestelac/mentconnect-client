@@ -1,13 +1,13 @@
-<div class=private-layout>
+<div class="private-layout flex flex-column h-full">
     <app-header (navOpenEvent)="toggleMenu()">
     </app-header>
 
-    <div class="container">
-        <p-sidebar [(visible)]="visibleSideBar" [baseZIndex]="10000" [modal]="false" >
+    <div class="flex h-full">
+        <p-sidebar [(visible)]="visibleSideBar" [baseZIndex]="10000" [modal]="false" [showCloseIcon]="false">
             <app-nav></app-nav>
         </p-sidebar>
 
-        <div class="content"> 
+        <div class="block w-full"> 
             <router-outlet></router-outlet>
         </div>
     </div>

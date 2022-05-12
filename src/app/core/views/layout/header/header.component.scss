@@ -7,23 +7,3 @@
         background-color: #29abe2;
     }
 }
-
-
-.logo {
-    clear: left;
-    text-align: left;
-    display: flex;
-    justify-content: center;
-    vertical-align: middle;
-
-    .image {
-        float: left;
-    }
-      
-    .text {
-        margin-left: 0.5rem;
-        align-self: center;
-        font-size: 1.25rem;
-        color: white;
-    }
-}
