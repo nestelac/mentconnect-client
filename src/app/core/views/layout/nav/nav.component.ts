@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { MenuItem, PrimeIcons } from 'primeng/api';
 import { Role } from 'src/app/core/models/Role';
 import { User } from '../../../models/User';
 
-import { CustomTranslateService } from 'src/app/core/services/custom-translate.service';
 import { AuthService } from '../../../services/auth.service';
 
 @Component({
@@ -12,16 +12,13 @@ import { AuthService } from '../../../services/auth.service';
   styleUrls: ['./nav.component.scss']
 })
 export class NavComponent implements OnInit {
-  routeTranslate = 'security/menu/';
-
   user : User | null = null;
   items: MenuItem[];
 
   constructor(
     private auth: AuthService,
-    public translate : CustomTranslateService
+    private translate: TranslateService
   ) { 
-    this.translate.setRoute(this.routeTranslate)
   }
 
   ngOnInit(): void {
@@ -29,11 +26,11 @@ export class NavComponent implements OnInit {
     this.items = [
       //{label: this.getName(), icon: PrimeIcons.USER, style: "font-size: 2em:color:green", routerLink: '/welcome', visible: this.auth.hasRole([])},
       {separator: true},
-      {label: this.translate.translateKey('menu.assistance'), icon: PrimeIcons.USERS, routerLink: '/patient-discharge', visible: this.auth.hasRole([Role.Staff])},
-      {label: this.translate.translateKey('menu.questionnaire'), icon: PrimeIcons.PENCIL, routerLink: '/welcome', visible: this.auth.hasRole([Role.Staff])},
-      {label: this.translate.translateKey('menu.schedule'), icon: PrimeIcons.CALENDAR, routerLink: '/welcome', visible: this.auth.hasRole([Role.Staff])},
-      {label: this.translate.translateKey('menu.management'), icon: PrimeIcons.COG, routerLink: '/welcome', visible: this.auth.hasRole([])},
-      {label: this.translate.translateKey('menu.logOut'), icon: 'pi pi-sign-out', command: () => { this.logout(); }}
+      {label: this.translate.instant('menu.assistance'), icon: PrimeIcons.USERS, routerLink: '/patient-discharge', visible: this.auth.hasRole([Role.Staff])},
+      {label: this.translate.instant('menu.questionnaire'), icon: PrimeIcons.PENCIL, routerLink: '/welcome', visible: this.auth.hasRole([Role.Staff])},
+      {label: this.translate.instant('menu.schedule'), icon: PrimeIcons.CALENDAR, routerLink: '/welcome', visible: this.auth.hasRole([Role.Staff])},
+      {label: this.translate.instant('menu.management'), icon: PrimeIcons.COG, routerLink: '/welcome', visible: this.auth.hasRole([])},
+      {label: this.translate.instant('menu.logOut'), icon: 'pi pi-sign-out', command: () => { this.logout(); }}
       ];
   }
 

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { CustomTranslateService } from '../../services/custom-translate.service';
 
 @Component({
   selector: 'app-welcome',
@@ -7,13 +6,7 @@ import { CustomTranslateService } from '../../services/custom-translate.service'
   styleUrls: ['./welcome.component.scss']
 })
 export class WelcomeComponent implements OnInit {
-  routeTranslate = 'security/welcome/';
-
-  constructor(
-    public translate : CustomTranslateService
-  ) { 
-    this.translate.setRoute(this.routeTranslate)
-  }
+  constructor() { }
 
   ngOnInit(): void {
   }

@@ -3,9 +3,8 @@ import { Router } from '@angular/router';
 import { AuthService } from 'src/app/core/services/auth.service';
 import { ResponseCredentials } from 'src/app/core/models/ResponseCredentials';
 import { LoginService } from '../../services/login.service';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { CustomTranslateService } from 'src/app/core/services/custom-translate.service';
 import { MessageService } from 'primeng/api';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-login',
@@ -15,7 +14,6 @@ import { MessageService } from 'primeng/api';
 })
 export class LoginComponent implements OnInit {
 
-  routeTranslate = 'security/login/';
   titleErrorKey = 'login.form.credentialError.title';
   detailErrorKey = "login.form.credentialError.detail";
   user: string = "";
@@ -29,10 +27,10 @@ export class LoginComponent implements OnInit {
     private loginService: LoginService,
     private auth: AuthService,
     private router: Router,
-    public translate : CustomTranslateService,
+    private translate: TranslateService,
     private mesaageService: MessageService
   ) { 
-    this.translate.setRoute(this.routeTranslate)
+    console.log("TODO: Seleccionar el combo dependiendo del locale -> " + translate.currentLang);
   }
 
   ngOnInit(): void {
@@ -60,9 +58,9 @@ export class LoginComponent implements OnInit {
 
   }
   onSetLanguage(code: string){
-    this.translate.setLang(code);
+    this.translate.use(code);
   }
   showMessageError(){
-    this.mesaageService.add({key: 'credentialError', severity:'error', summary: this.translate.translateKey(this.titleErrorKey), detail: this.translate.translateKey(this.detailErrorKey)});
+    this.mesaageService.add({key: 'credentialError', severity:'error', summary: this.translate.instant(this.titleErrorKey), detail: this.translate.instant(this.detailErrorKey)});
   }
 }
