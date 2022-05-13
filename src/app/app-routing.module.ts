@@ -4,7 +4,6 @@ import { AuthGuardService } from './core/services/auth-guard.service';
 import { LoginComponent } from './security/views/login/login.component';
 import { LayoutComponent } from './core/views/layout/layout.component';
 import { WelcomeComponent } from './core/views/welcome/welcome.component';
-import { PatientDischargeComponent } from './core/views/patient-discharge/patient-discharge.component';
 import { Role } from './core/models/Role';
 
 const routes: Routes = [
@@ -15,7 +14,6 @@ const routes: Routes = [
     canActivate: [AuthGuardService],
     children: [
       { path: 'welcome', component: WelcomeComponent,  canActivate: [AuthGuardService], data: { roles: [Role.Staff] }},
-      { path: 'patient-discharge', component: PatientDischargeComponent,  canActivate: [AuthGuardService], data: { roles: [Role.Staff] }},
       { path: '**', redirectTo: 'welcome', pathMatch: 'full' },
     ]
   },  

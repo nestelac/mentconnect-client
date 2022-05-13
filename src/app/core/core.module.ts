@@ -14,17 +14,15 @@ import { ToolbarModule } from 'primeng/toolbar';
 import { ButtonModule } from 'primeng/button';
 import { MenuModule } from 'primeng/menu';
 import { AvatarModule } from 'primeng/avatar';
-import { PatientDischargeComponent } from './views/patient-discharge/patient-discharge.component';
-import { BreadcrumbModule } from 'primeng/breadcrumb';
 import { TranslateModule } from '@ngx-translate/core';
+import {DropdownModule} from 'primeng/dropdown';
 
 @NgModule({
   declarations: [
     LayoutComponent,
     WelcomeComponent,
     HeaderComponent,
-    NavComponent,
-    PatientDischargeComponent
+    NavComponent
   ],
   imports: [
     CommonModule,
@@ -36,8 +34,8 @@ import { TranslateModule } from '@ngx-translate/core';
     ButtonModule,
     MenuModule,
     AvatarModule,
-    BreadcrumbModule,
-    TranslateModule
+    TranslateModule,
+    DropdownModule
   ],
   providers: [
     HttpClientModule,
