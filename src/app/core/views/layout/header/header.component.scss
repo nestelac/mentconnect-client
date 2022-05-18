@@ -1,13 +1,14 @@
 ::ng-deep {
     .p-toolbar {
         background-color: #29abe2;
+        border-radius: 0px !important;
     }
     .header-button {
         .p-button {
             background: transparent;
 
             .p-avatar{
-                background-color: #29abe2;
+                background: transparent;
             }
         }
 
@@ -20,5 +21,4 @@
         }
     }
 }
-
 
