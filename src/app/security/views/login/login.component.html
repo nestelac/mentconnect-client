@@ -20,9 +20,7 @@
     
         <div class="p-float-label p-input-icon-left mt-4">
             <i class="pi pi-lock"></i>
-            <p-dropdown  optionLabel="label" (onChange)="onSetLanguage($event.value.code)"
-            [options] = "languages">
-            </p-dropdown>
+            <p-dropdown [options] = "languages" [(ngModel)]="selectedLangCode" optionLabel="label" optionValue="code" (onChange)="onLangChange()"></p-dropdown>
             <label>{{"login.form.language.title" | translate}}</label>
         </div>
         <button pButton (click) = "onLogin()" [disabled]="user == '' || password == ''" class="primary mt-4" label = "{{'login.form.logIn' | translate}}"></button>
