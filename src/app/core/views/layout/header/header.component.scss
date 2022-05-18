@@ -2,23 +2,23 @@
     .p-toolbar {
         background-color: #29abe2;
     }
+    .header-button {
+        .p-button {
+            background: transparent;
 
-    .p-button {
-        background: transparent;
+            .p-avatar{
+                background-color: #29abe2;
+            }
+        }
 
-        .p-avatar{
-            background-color: #29abe2;
+        .p-button:enabled:focus {
+            background: transparent;
+        }
+
+        .p-button:enabled:hover {
+            background: transparent;
         }
     }
-
-    .p-button:enabled:focus {
-        background: transparent;
-    }
-
-    .p-button:enabled:hover {
-        background: transparent;
-    }
-
 }
 
 

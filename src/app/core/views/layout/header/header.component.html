@@ -1,5 +1,5 @@
 <p-toolbar class="container">
-    <div class="p-toolbar-group-left">
+    <div class="header-button p-toolbar-group-left">
       <button pButton pRipple type="button" icon="pi pi-bars" (click)="toggleSideNav()" class="p-button-rounded"></button>
     </div>
 
@@ -12,13 +12,16 @@
       </div>
     </div>
     
-    <button type="button" pButton pRipple class="p-toolbar-group-right p-button-rounded">
-      <p-avatar
-        icon="pi pi-bell"
-        pBadge
-        value="0"
-        styleClass="p-mr-2"
-      ></p-avatar>
-    </button>
+    <div class="header-button p-toolbar-group-right">
+      <button type="button" pButton pRipple class="p-button-rounded">
+        <p-avatar
+          icon="pi pi-bell"
+          pBadge
+          value="0"
+          styleClass="p-mr-2"
+        ></p-avatar>
+      </button>
+    </div>
+
 
 </p-toolbar>
