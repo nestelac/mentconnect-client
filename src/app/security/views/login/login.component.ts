@@ -62,6 +62,7 @@ export class LoginComponent implements OnInit {
 
   onLangChange(){
     this.translate.use(this.selectedLangCode);
+    localStorage.setItem('userLocale', this.selectedLangCode); 
   }
 
   showMessageError(){
