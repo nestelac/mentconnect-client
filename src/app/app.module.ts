@@ -11,6 +11,7 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { MessagesModule } from 'primeng/messages';
 import { MessageModule } from 'primeng/message';
 import { TranslateHttpLoader } from './core/utils/translate-http-loader';
+import { PatientDischargeComponent } from './assistance/views/patient-discharge/patient-discharge.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, "./assets/i18n/", [
@@ -23,7 +24,8 @@ export function HttpLoaderFactory(http: HttpClient) {
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PatientDischargeComponent
   ],
   imports: [
     BrowserModule,
