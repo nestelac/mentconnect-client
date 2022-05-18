@@ -1,0 +1,27 @@
+::ng-deep {
+    .toolbar-header {
+        .p-toolbar {
+            background-color: #29abe2;
+            border-radius: 0px !important;
+        }
+    }
+
+    .header-button {
+        .p-button {
+            background: transparent;
+
+            .p-avatar{
+                background: transparent;
+            }
+        }
+
+        .p-button:enabled:focus {
+            background: transparent;
+        }
+
+        .p-button:enabled:hover {
+            background: transparent;
+        }
+    }
+}
+

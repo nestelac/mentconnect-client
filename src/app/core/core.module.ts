@@ -13,7 +13,10 @@ import { SidebarModule } from 'primeng/sidebar';
 import { ToolbarModule } from 'primeng/toolbar';
 import { ButtonModule } from 'primeng/button';
 import { MenuModule } from 'primeng/menu';
+import { AvatarModule } from 'primeng/avatar';
 import { TranslateModule } from '@ngx-translate/core';
+import { DropdownModule } from 'primeng/dropdown';
+import { BadgeModule } from 'primeng/badge';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,10 @@ import { TranslateModule } from '@ngx-translate/core';
     ToolbarModule,
     ButtonModule,
     MenuModule,
-    TranslateModule
+    AvatarModule,
+    TranslateModule,
+    DropdownModule,
+    BadgeModule
   ],
   providers: [
     HttpClientModule,

@@ -6,16 +6,20 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CoreModule } from './core/core.module';
 import { SecurityModule } from './security/security.module';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
-import {MessagesModule} from 'primeng/messages';
-import {MessageModule} from 'primeng/message';
+import { MessagesModule } from 'primeng/messages';
+import { MessageModule } from 'primeng/message';
+import { TranslateHttpLoader } from './core/utils/translate-http-loader';
 
-export function HttpLoeaderFactory(http : HttpClient)
-{
-  return new TranslateHttpLoader(http, 'assets/i18n/', '.json')
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http, "./assets/i18n/", [
+      "security/login",
+      "core/layout/menu",
+      "core/layout/welcome"
+  ]);
 }
+
 
 @NgModule({
   declarations: [
@@ -32,7 +36,7 @@ export function HttpLoeaderFactory(http : HttpClient)
     TranslateModule.forRoot({
       loader :{
         provide : TranslateLoader,
-        useFactory : HttpLoeaderFactory,
+        useFactory : HttpLoaderFactory,
         deps: [HttpClient]
       }
     })
