@@ -3,7 +3,21 @@
         background-color: #29abe2;
     }
 
-    .p-button{
+    .p-button:enabled:focus{
         background-color: #29abe2;
+        border: 10px;
+        outline: 10 !important;
+        border-color: white;
+    }
+    .p-button:enabled:hover{
+        background-color: #29abe2;
+    }
+    .p-button{
+        background-color: #29abe2;;
+
+        .p-avatar{
+            background-color: #29abe2;
+        }
+
     }
 }

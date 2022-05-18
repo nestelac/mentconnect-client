@@ -15,7 +15,8 @@ import { ButtonModule } from 'primeng/button';
 import { MenuModule } from 'primeng/menu';
 import { AvatarModule } from 'primeng/avatar';
 import { TranslateModule } from '@ngx-translate/core';
-import {DropdownModule} from 'primeng/dropdown';
+import { DropdownModule } from 'primeng/dropdown';
+import { BadgeModule } from 'primeng/badge';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import {DropdownModule} from 'primeng/dropdown';
     MenuModule,
     AvatarModule,
     TranslateModule,
-    DropdownModule
+    DropdownModule,
+    BadgeModule
   ],
   providers: [
     HttpClientModule,
