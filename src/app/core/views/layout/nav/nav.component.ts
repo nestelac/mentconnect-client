@@ -25,10 +25,52 @@ export class NavComponent implements OnInit {
     this.user = this.auth.getUserInfo();
     this.items = [
       {separator: true},
-      {label: this.translate.instant('menu.assistance'), icon: PrimeIcons.USERS, routerLink: '/patient-discharge', visible: this.auth.hasRole([Role.Staff])},
-      {label: this.translate.instant('menu.questionnaire'), icon: PrimeIcons.PENCIL, routerLink: '/welcome', visible: this.auth.hasRole([Role.Staff])},
-      {label: this.translate.instant('menu.schedule'), icon: PrimeIcons.CALENDAR, routerLink: '/welcome', visible: this.auth.hasRole([Role.Staff])},
-      {label: this.translate.instant('menu.management'), icon: PrimeIcons.COG, routerLink: '/welcome', visible: this.auth.hasRole([])},
+      {label: this.translate.instant('menu.assistance'), icon: PrimeIcons.USERS, visible: this.auth.hasRole([Role.Staff]),
+        items:[
+          {
+            label:'Alta paciente',
+            icon:'pi pi-fw pi-user-plus',
+            routerLink: '/welcome'
+          },
+          {
+            label:'Pacientes',
+            icon:'pi pi-fw pi-users',
+            routerLink: '/welcome'
+          }
+        ]
+      },
+      {label: this.translate.instant('menu.questionnaire'), icon: PrimeIcons.PENCIL, visible: this.auth.hasRole([Role.Staff]),
+        items:[
+          {
+            label:'Listado',
+            icon:'pi pi-fw pi-book',
+            routerLink: '/welcome'
+          }
+        ]
+      },
+      {label: this.translate.instant('menu.schedule'), icon: PrimeIcons.CALENDAR, visible: this.auth.hasRole([Role.Staff]),
+        items:[
+          {
+            label:'Eventos',
+            icon:'pi pi-fw pi-bookmark',
+            routerLink: '/welcome'
+          }
+        ]
+      },
+      {label: this.translate.instant('menu.management'), icon: PrimeIcons.COG, visible: this.auth.hasRole([]),
+        items:[
+          {
+            label:'Usuarios',
+            icon:'pi pi-fw pi-users',
+            routerLink: '/welcome'
+          },
+          {
+            label:'Estadísticas',
+            icon:'pi pi-fw pi-chart-bar',
+            routerLink: '/welcome'
+          }
+        ]
+      },
       {label: this.translate.instant('menu.logOut'), icon: 'pi pi-sign-out', command: () => { this.logout(); }}
       ];
   }

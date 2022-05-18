@@ -17,6 +17,7 @@ import { AvatarModule } from 'primeng/avatar';
 import { TranslateModule } from '@ngx-translate/core';
 import { DropdownModule } from 'primeng/dropdown';
 import { BadgeModule } from 'primeng/badge';
+import {SlideMenuModule} from 'primeng/slidemenu';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { BadgeModule } from 'primeng/badge';
     AvatarModule,
     TranslateModule,
     DropdownModule,
-    BadgeModule
+    BadgeModule,
+    SlideMenuModule,
   ],
   providers: [
     HttpClientModule,
