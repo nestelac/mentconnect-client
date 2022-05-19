@@ -27,35 +27,19 @@ export class NavComponent implements OnInit {
       {separator: true},
       {label: this.translate.instant('menu.assistance.title'), icon: PrimeIcons.USERS, visible: this.auth.hasRole([Role.Staff]),
         items:[
-          {
-            label:this.translate.instant('menu.assistance.discharge'),
-            icon:'pi pi-fw pi-user-plus',
-            routerLink: '/welcome'
-          },
-          {
-            label: this.translate.instant('menu.assistance.patients'),
-            icon:'pi pi-fw pi-users',
-            routerLink: '/welcome'
-          }
+          {label: this.translate.instant('menu.assistance.discharge'), icon: PrimeIcons.USER_PLUS, routerLink: '/welcome', visible: this.auth.hasRole([Role.Staff])},
+          {label: this.translate.instant('menu.assistance.patients'), icon: PrimeIcons.USERS, routerLink: '/welcome', visible: this.auth.hasRole([Role.Staff])}
         ]
       },
-      {label: this.translate.instant('menu.questionnaire'), icon: PrimeIcons.PENCIL, visible: this.auth.hasRole([Role.Staff])},
-      {label: this.translate.instant('menu.schedule'), icon: PrimeIcons.CALENDAR, visible: this.auth.hasRole([Role.Staff])},
+      {label: this.translate.instant('menu.questionnaire'), icon: PrimeIcons.PENCIL, routerLink: '/welcome', visible: this.auth.hasRole([Role.Staff])},
+      {label: this.translate.instant('menu.schedule'), icon: PrimeIcons.CALENDAR, routerLink: '/welcome', visible: this.auth.hasRole([Role.Staff])},
       {label: this.translate.instant('menu.management.title'), icon: PrimeIcons.COG, visible: this.auth.hasRole([]),
         items:[
-          {
-            label: this.translate.instant('menu.management.users'),
-            icon:'pi pi-fw pi-users',
-            routerLink: '/welcome'
-          },
-          {
-            label: this.translate.instant('menu.management.estadistics'),
-            icon:'pi pi-fw pi-chart-bar',
-            routerLink: '/welcome'
-          }
+          {label: this.translate.instant('menu.management.users'), icon: PrimeIcons.USERS, routerLink: '/welcome', visible: this.auth.hasRole([Role.Staff])},
+          {label: this.translate.instant('menu.management.estadistics'), icon: PrimeIcons.CHART_BAR, routerLink: '/welcome', visible: this.auth.hasRole([Role.Staff])}
         ]
       },
-      {label: this.translate.instant('menu.logOut'), icon: 'pi pi-sign-out', command: () => { this.logout(); }}
+      {label: this.translate.instant('menu.logOut'), icon: PrimeIcons.SIGN_OUT, command: () => { this.logout(); }}
       ];
   }
 
