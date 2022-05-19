@@ -1,9 +1,17 @@
 {
     "menu": {
-        "assistance": "Assistance",
+        "assistance": {
+            "title" : "Assistance",
+            "discharge" : "Patient discharge",
+            "patients" : "Patients"
+        },
         "questionnaire": "Questionnaire",
         "schedule": "Schedule",
-        "management": "Management",
+        "management": {
+            "title" : "Management",
+            "users" : "Users",
+            "estadistics" : "Estadistics"
+        },
         "logOut": "Log out"
     }
 }

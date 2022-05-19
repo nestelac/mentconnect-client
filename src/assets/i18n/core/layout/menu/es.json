@@ -1,9 +1,17 @@
 {
     "menu": {
-        "assistance": "Asistencia",
+        "assistance": {
+            "title" : "Asistencia",
+            "discharge" : "Alta de pacientes",
+            "patients" : "Pacientes"
+        },
         "questionnaire": "Cuestionarios",
         "schedule": "Agenda",
-        "management": "Gestión",
+        "management": {
+            "title" : "Gestión",
+            "users" : "Usuarios",
+            "estadistics" : "Estadísticas"
+        },
         "logOut": "Cerrar sesión"
     }
 }
