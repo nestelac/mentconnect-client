@@ -21,7 +21,9 @@ export class LoginComponent implements OnInit {
   isloading : boolean = false;
   languages = [{label: "English", code: "en"},
               {label: "Español", code: "es"},
-              {label: "Valencià", code: "ca"}]
+              {label: "Valencià", code: "ca"}];
+
+  selectedLangCode: string;
 
   constructor(    
     private loginService: LoginService,
@@ -29,8 +31,8 @@ export class LoginComponent implements OnInit {
     private router: Router,
     private translate: TranslateService,
     private mesaageService: MessageService
-  ) { 
-    console.log("TODO: Seleccionar el combo dependiendo del locale -> " + translate.currentLang);
+  ) {
+    this.selectedLangCode = translate.currentLang;
   }
 
   ngOnInit(): void {
@@ -38,6 +40,7 @@ export class LoginComponent implements OnInit {
       this.router.navigate(['welcome']);
     } 
   }
+
   onLogin(){
 
     if (this.user == "") return;
@@ -55,11 +58,13 @@ export class LoginComponent implements OnInit {
         this.isloading = false;
       }
     );
+  }
 
+  onLangChange(){
+    this.translate.use(this.selectedLangCode);
+    localStorage.setItem('userLocale', this.selectedLangCode); 
   }
-  onSetLanguage(code: string){
-    this.translate.use(code);
-  }
+
   showMessageError(){
     this.mesaageService.add({key: 'credentialError', severity:'error', summary: this.translate.instant(this.titleErrorKey), detail: this.translate.instant(this.detailErrorKey)});
   }

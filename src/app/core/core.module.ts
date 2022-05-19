@@ -12,11 +12,11 @@ import { DialogService, DynamicDialogModule } from 'primeng/dynamicdialog';
 import { SidebarModule } from 'primeng/sidebar';
 import { ToolbarModule } from 'primeng/toolbar';
 import { ButtonModule } from 'primeng/button';
-import { MenuModule } from 'primeng/menu';
 import { AvatarModule } from 'primeng/avatar';
 import { TranslateModule } from '@ngx-translate/core';
 import { DropdownModule } from 'primeng/dropdown';
 import { BadgeModule } from 'primeng/badge';
+import {SlideMenuModule} from 'primeng/slidemenu';
 
 @NgModule({
   declarations: [
@@ -33,11 +33,11 @@ import { BadgeModule } from 'primeng/badge';
     SidebarModule,
     ToolbarModule,
     ButtonModule,
-    MenuModule,
     AvatarModule,
     TranslateModule,
     DropdownModule,
-    BadgeModule
+    BadgeModule,
+    SlideMenuModule,
   ],
   providers: [
     HttpClientModule,

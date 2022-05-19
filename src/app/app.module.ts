@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { APP_INITIALIZER, Injector, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -7,25 +7,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CoreModule } from './core/core.module';
 import { SecurityModule } from './security/security.module';
 import { HttpClient } from '@angular/common/http';
-import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateModule, TranslateLoader, TranslateService } from '@ngx-translate/core';
 import { MessagesModule } from 'primeng/messages';
 import { MessageModule } from 'primeng/message';
-import { TranslateHttpLoader } from './core/utils/translate-http-loader';
-import { PatientDischargeComponent } from './assistance/views/patient-discharge/patient-discharge.component';
-
-export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http, "./assets/i18n/", [
-      "security/login",
-      "core/layout/menu",
-      "core/layout/welcome"
-  ]);
-}
+import { appInitializerFactory, HttpLoaderFactory } from './core/utils/translate-initializer';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    PatientDischargeComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +33,14 @@ export function HttpLoaderFactory(http: HttpClient) {
       }
     })
   ],
-  providers: [],
+  providers: [
+    {
+      provide: APP_INITIALIZER,
+      useFactory: appInitializerFactory,
+      deps: [TranslateService, Injector],
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
