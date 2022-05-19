@@ -1,7 +1,9 @@
+@import "./src/assets/scss/master";
+
 ::ng-deep {
     .toolbar-header {
         .p-toolbar {
-            background-color: #29abe2;
+            background-color: $primary;
             border-radius: 0px !important;
         }
     }
