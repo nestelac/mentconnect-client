@@ -24,7 +24,6 @@ export class NavComponent implements OnInit {
   ngOnInit(): void {
     this.user = this.auth.getUserInfo();
     this.items = [
-      {separator: true},
       {label: this.translate.instant('menu.assistance.title'), icon: PrimeIcons.USERS, visible: this.auth.hasRole([Role.Staff]),
         items:[
           {label: this.translate.instant('menu.assistance.discharge'), icon: PrimeIcons.USER_PLUS, routerLink: '/welcome', visible: this.auth.hasRole([Role.Staff])},
