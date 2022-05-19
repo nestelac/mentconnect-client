@@ -5,6 +5,7 @@ import { LoginComponent } from './security/views/login/login.component';
 import { LayoutComponent } from './core/views/layout/layout.component';
 import { WelcomeComponent } from './core/views/welcome/welcome.component';
 import { Role } from './core/models/Role';
+import { PatientDischargeComponent } from './assistance/views/patient-discharge/patient-discharge.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent},
@@ -14,6 +15,7 @@ const routes: Routes = [
     canActivate: [AuthGuardService],
     children: [
       { path: 'welcome', component: WelcomeComponent,  canActivate: [AuthGuardService], data: { roles: [Role.Staff] }},
+      { path: 'patientDischarge', component: PatientDischargeComponent,  canActivate: [AuthGuardService], data: { roles: [Role.Staff] }},
       { path: '**', redirectTo: 'welcome', pathMatch: 'full' },
     ]
   },  
