@@ -11,7 +11,7 @@ import { TranslateModule, TranslateLoader, TranslateService } from '@ngx-transla
 import { MessagesModule } from 'primeng/messages';
 import { MessageModule } from 'primeng/message';
 import { appInitializerFactory, HttpLoaderFactory } from './core/utils/translate-initializer';
-
+import { AssistanceModule } from './assistance/assistance.module';
 
 @NgModule({
   declarations: [
@@ -25,6 +25,7 @@ import { appInitializerFactory, HttpLoaderFactory } from './core/utils/translate
     SecurityModule,
     MessagesModule,
     MessageModule,
+    AssistanceModule,
     TranslateModule.forRoot({
       loader :{
         provide : TranslateLoader,
