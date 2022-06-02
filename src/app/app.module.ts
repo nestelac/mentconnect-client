@@ -11,6 +11,7 @@ import { TranslateModule, TranslateLoader, TranslateService } from '@ngx-transla
 import { MessagesModule } from 'primeng/messages';
 import { MessageModule } from 'primeng/message';
 import { appInitializerFactory, HttpLoaderFactory } from './core/utils/translate-initializer';
+import { ManagementModule } from './management/management.module';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { appInitializerFactory, HttpLoaderFactory } from './core/utils/translate
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    ManagementModule,
     CoreModule,
     SecurityModule,
     MessagesModule,

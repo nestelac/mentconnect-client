@@ -4,6 +4,7 @@ import { AuthGuardService } from './core/services/auth-guard.service';
 import { LoginComponent } from './security/views/login/login.component';
 import { LayoutComponent } from './core/views/layout/layout.component';
 import { WelcomeComponent } from './core/views/welcome/welcome.component';
+import { UserListComponent } from './management/views/user-list/user-list.component';
 import { Role } from './core/models/Role';
 
 const routes: Routes = [
@@ -18,6 +19,7 @@ const routes: Routes = [
     ]
   },  
   { path: '**', redirectTo: 'login', pathMatch: 'full' },
+  { path: 'user-list', component: UserListComponent},
 ];
 
 @NgModule({

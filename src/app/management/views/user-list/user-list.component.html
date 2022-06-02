@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="title-button">
+        <h1> Lista de usuarios </h1>
+    </div>
+
+    <p-table #table [value]="users" [lazy]="true" (onLazyLoad)="loadPage($event)" [totalRecords]="totalElements" [loading]="loading" 
+    [scrollable]="true" responsiveLayout="scroll" scrollHeight="calc(100vh - 330px)" [paginator]="true" [rows]="25" [showCurrentPageReport]="true" 
+    currentPageReportTemplate="{first} - {last} of {totalRecords}" [rowsPerPageOptions]="[10,25,50]">
+        <ng-template pTemplate="header">
+            <tr>
+                <th pSortableColumn="project.customer.name">NIF </th>
+                <th pSortableColumn="project.name">Nombre </th>
+                <th pSortableColumn="created">Apellidos </th>
+                <th pSortableColumn="estVersion">Sexo </th>
+                <th pSortableColumn="totalDays">Edad </th>
+                <th pSortableColumn="totalCost">SIP </th>
+                <th pSortableColumn="totalCost">H.Clínico </th>
+                <th>Acciones</th>
+            </tr>
+        </ng-template>
+        
+        <ng-template pTemplate="body" let-estimation>
+            <tr>
+                <td>{{nif}}</td>
+                <td>{{nombre}}</td>
+                <td>{{apellidos}}</td>
+                <td>{{sexo}}</td> 
+                <td>{{edad}}</td>
+                <td>{{sip}}€</td>
+                <td>{{HClinico}}</td>
+                <td>{{acciones}}</td>
+            </tr>
+        </ng-template>
+        
+        <ng-template pTemplate="paginatorleft">
+            <p-button type="button" icon="pi pi-plus" styleClass="p-button-text"></p-button>
+        </ng-template>
+        <ng-template pTemplate="paginatorright">
+            <p-button type="button" icon="pi pi-cloud" styleClass="p-button-text"></p-button>
+        </ng-template>
+    </p-table> 
+</div>
